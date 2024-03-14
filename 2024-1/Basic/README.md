@@ -29,7 +29,7 @@
 | :--: | :--------------------------------------------------------------------------------------------------------: | :-----: |
 |  00  |                                          오리엔테이션 (문제집 X)                                           |
 |  01  |                                      기초 코드 작성 요령 I (문제집 X)                                      |
-|  02  | [기초 코드 작성 요령 II](https://github.com/encrypted-def/basic-algo-lecture/blob/master/workbook/0x02.md) | [2445](https://www.acmicpc.net/problem/2445) / [2562](https://www.acmicpc.net/problem/2562) |
+|  02  | [기초 코드 작성 요령 II](https://github.com/encrypted-def/basic-algo-lecture/blob/master/workbook/0x02.md) | [2445](www.acmicpc.net/problem/2445) / [2562](www.acmicpc.net/problem/2562) |
 |  03  |         [Array](https://github.com/encrypted-def/basic-algo-lecture/blob/master/workbook/0x03.md)          |
 |  04  |      [Linked list](https://github.com/encrypted-def/basic-algo-lecture/blob/master/workbook/0x04.md)       |
 |  05  |         [Stack](https://github.com/encrypted-def/basic-algo-lecture/blob/master/workbook/0x05.md)          |
