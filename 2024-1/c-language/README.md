@@ -7,8 +7,7 @@
 
 ## 형식
 - 주 1회, 대면으로 진행
-- 멘토링이 아닌 전체 참여 방식
-
+- 멘토링 방식
 ## 커리큘럼
 | | |
 | --- | --- |
@@ -19,8 +18,5 @@
 | 5 주차 | 포인터 / 구조체 / 구조체 활용 |
 | 6 주차 | 파일 입출력 / 동적 메모리 / 동적 메모리 활용 |
 | 7 주차 | 발표
-
-## 문제집
-- 링크 : [https://www.acmicpc.net/group/workbook/view/20237/67073](https://www.acmicpc.net/group/workbook/20237)https://www.acmicpc.net/group/workbook/20237
 
 
