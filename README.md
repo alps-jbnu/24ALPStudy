@@ -1,4 +1,4 @@
-# 23ALPStudy
+# 24ALPStudy
 2024 ALPS study repository 
   
 ## How to Contribute
