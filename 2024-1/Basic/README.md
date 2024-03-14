@@ -30,16 +30,16 @@
 |  00  |                                          오리엔테이션 (문제집 X)                                           |
 |  01  |                                      기초 코드 작성 요령 I (문제집 X)                                      |
 |  02  | [기초 코드 작성 요령 II](https://github.com/encrypted-def/basic-algo-lecture/blob/master/workbook/0x02.md) | [2445](https://www.acmicpc.net/problem/2445) / [2562](https://www.acmicpc.net/problem/2562) |
-|  03  |         [Array](https://github.com/encrypted-def/basic-algo-lecture/blob/master/workbook/0x03.md)          |
-|  04  |      [Linked list](https://github.com/encrypted-def/basic-algo-lecture/blob/master/workbook/0x04.md)       |
-|  05  |         [Stack](https://github.com/encrypted-def/basic-algo-lecture/blob/master/workbook/0x05.md)          |
-|  06  |         [Queue](https://github.com/encrypted-def/basic-algo-lecture/blob/master/workbook/0x06.md)          |
-|  07  |         [Deque](https://github.com/encrypted-def/basic-algo-lecture/blob/master/workbook/0x07.md)          |
-|  08  |          [BFS](https://github.com/encrypted-def/basic-algo-lecture/blob/master/workbook/0x09.md)           |
-|  09  |         [Graph](https://github.com/encrypted-def/basic-algo-lecture/blob/master/workbook/0x18.md)         |
-|  10  |       [Recursion](https://github.com/encrypted-def/basic-algo-lecture/blob/master/workbook/0x0B.md)        |
-|  11  |         [백트래킹](https://github.com/encrypted-def/basic-algo-lecture/blob/master/workbook/0x0C.md)          |
-|  12  |          [Tree](https://github.com/encrypted-def/basic-algo-lecture/blob/master/workbook/0x19.md)          |
-|  13  |          [BST](https://github.com/encrypted-def/basic-algo-lecture/blob/master/workbook/0x16.md)           |
-|  14  |   [우선순위 큐(heap)](https://github.com/encrypted-def/basic-algo-lecture/blob/master/workbook/0x17.md)    |
+|  03  |         [Array](https://github.com/encrypted-def/basic-algo-lecture/blob/master/workbook/0x03.md)          | [1475](https://www.acmicpc.net/problem/2577) / [10807](https://www.acmicpc.net/problem/10807) |
+|  04  |      [Linked list](https://github.com/encrypted-def/basic-algo-lecture/blob/master/workbook/0x04.md)       | [1158](https://www.acmicpc.net/problem/1158) |
+|  05  |         [Stack](https://github.com/encrypted-def/basic-algo-lecture/blob/master/workbook/0x05.md)          | [6198](https://www.acmicpc.net/problem/6198) / [3015](https://www.acmicpc.net/problem/3015) |
+|  06  |         [Queue](https://github.com/encrypted-def/basic-algo-lecture/blob/master/workbook/0x06.md)          | [2164](https://www.acmicpc.net/problem/2164) |
+|  07  |         [Deque](https://github.com/encrypted-def/basic-algo-lecture/blob/master/workbook/0x07.md)          | [5430](https://www.acmicpc.net/problem/5430) |
+|  08  |          [BFS](https://github.com/encrypted-def/basic-algo-lecture/blob/master/workbook/0x09.md)           | [2206](https://www.acmicpc.net/problem/2206) / [2573](https://www.acmicpc.net/problem/2573) |
+|  09  |         [Graph](https://github.com/encrypted-def/basic-algo-lecture/blob/master/workbook/0x18.md)         | [11403](https://www.acmicpc.net/problem/11403) / [6118](https://www.acmicpc.net/problem/6118) |
+|  10  |       [Recursion](https://github.com/encrypted-def/basic-algo-lecture/blob/master/workbook/0x0B.md)        | [2448](https://www.acmicpc.net/problem/2448) / [1780](https://www.acmicpc.net/problem/1780) |
+|  11  |         [백트래킹](https://github.com/encrypted-def/basic-algo-lecture/blob/master/workbook/0x0C.md)          | [15665](https://www.acmicpc.net/problem/15665) / [1941](https://www.acmicpc.net/problem/1941) |
+|  12  |          [Tree](https://github.com/encrypted-def/basic-algo-lecture/blob/master/workbook/0x19.md)          | [1240](https://www.acmicpc.net/problem/1240) / [1967](https://www.acmicpc.net/problem/1967) |
+|  13  |          [BST](https://github.com/encrypted-def/basic-algo-lecture/blob/master/workbook/0x16.md)           | [21944](https://www.acmicpc.net/problem/21939) / [1539](https://www.acmicpc.net/problem/1539) |
+|  14  |   [우선순위 큐(heap)](https://github.com/encrypted-def/basic-algo-lecture/blob/master/workbook/0x17.md)    | [1927](https://www.acmicpc.net/problem/2075) / [1655](https://www.acmicpc.net/problem/1655) |
 
