@@ -21,6 +21,6 @@
 | 7 주차 | 발표
 
 ## 문제집
-- 링크 : https://www.acmicpc.net/group/workbook/view/20237/67073
+- 링크 : [https://www.acmicpc.net/group/workbook/view/20237/67073](https://www.acmicpc.net/group/workbook/20237)https://www.acmicpc.net/group/workbook/20237
 
 
