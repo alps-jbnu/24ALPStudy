@@ -11,18 +11,17 @@
 ## 커리큘럼
 | | |
 | --- | --- |
-| 1 주차 | [OT](https://blog.encrypted.gg/921?category=773649) / 수학적 귀납법 |
-| 2 주차 | [이분 탐색](https://blog.encrypted.gg/985) / [투 포인터](https://blog.encrypted.gg/1004) |
-| 3 주차 | [DP](https://blog.encrypted.gg/974) |
-| 4 주차 | [그리디](https://blog.encrypted.gg/975) |
-| 5 주차  | [분할 정복](https://m.blog.naver.com/PostView.naver?blogId=kks227&logNo=220776241154&referrerCode=0&searchKeyword=%EB%B6%84%ED%95%A0%20%EC%A0%95%EB%B3%B5) |
-| 6 주차 | [다익스트라](https://blog.encrypted.gg/1037) / [플로이드](https://blog.encrypted.gg/1035) |
-| 7 주차 | Midterm |
-| 8 주차 | [최소 신장 트리](https://blog.encrypted.gg/1024) |
-| 9 주차 | [위상 정렬](https://blog.encrypted.gg/1020) |
-| 10 주차 | [Prefix sum](https://m.blog.naver.com/PostView.naver?blogId=kks227&logNo=220787178657&referrerCode=0&searchKeyword=prefix) |
-| 11 주차 | [분리 집합](https://m.blog.naver.com/PostView.naver?blogId=kks227&logNo=220791837179&referrerCode=0&searchKeyword=%EC%9C%A0%EB%8B%88%EC%98%A8) |
-| 12 주차 | Final Exam |
+| 1 주차 | [OT](https://blog.encrypted.gg/921?category=773649) / 수학적 귀납법 / [이분 탐색](https://blog.encrypted.gg/985) / [투 포인터](https://blog.encrypted.gg/1004) |
+| 2 주차 | [DP](https://blog.encrypted.gg/974) |
+| 3 주차 | [그리디](https://blog.encrypted.gg/975) |
+| 4 주차  | [분할 정복](https://m.blog.naver.com/PostView.naver?blogId=kks227&logNo=220776241154&referrerCode=0&searchKeyword=%EB%B6%84%ED%95%A0%20%EC%A0%95%EB%B3%B5) |
+| 5 주차 | [다익스트라](https://blog.encrypted.gg/1037) / [플로이드](https://blog.encrypted.gg/1035) |
+| 6 주차 | Midterm |
+| 7 주차 | [최소 신장 트리](https://blog.encrypted.gg/1024) |
+| 8 주차 | [위상 정렬](https://blog.encrypted.gg/1020) |
+| 9 주차 | [Prefix sum](https://m.blog.naver.com/PostView.naver?blogId=kks227&logNo=220787178657&referrerCode=0&searchKeyword=prefix) |
+| 10 주차 | [분리 집합](https://m.blog.naver.com/PostView.naver?blogId=kks227&logNo=220791837179&referrerCode=0&searchKeyword=%EC%9C%A0%EB%8B%88%EC%98%A8) |
+| 11 주차 | Final Exam |
 
 ## 문제집
 - 최소 기본문제 + (체크 되어있는)응용문제 이상 풀기
