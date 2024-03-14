@@ -25,7 +25,7 @@
 
 | 번호 |                                                    주제                                                    | 
 | :--: | :--------------------------------------------------------------------------------------------------------: |
-|  01  | [기본](https://www.acmicpc.net/group/workbook/view/20237/67073). |
+|  01  | [기본](https://www.acmicpc.net/group/workbook/view/20237/67073) |
 |  02  | [기초 코드 작성 요령 II](https://github.com/encrypted-def/basic-algo-lecture/blob/master/workbook/0x02.md) | -- |
 |  03  |         [Array](https://github.com/encrypted-def/basic-algo-lecture/blob/master/workbook/0x03.md)          |
 |  04  |      [Linked list](https://github.com/encrypted-def/basic-algo-lecture/blob/master/workbook/0x04.md)       |
