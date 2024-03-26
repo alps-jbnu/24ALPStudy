@@ -6,7 +6,8 @@ int main()
 {
     fastio;
 
-    int N, num[10]{}; cin >> N;
+    int N; cin >> N;
+    int num[10] = {};
 
     while (N != 0)
     {
