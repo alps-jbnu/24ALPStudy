@@ -7,7 +7,7 @@ int main()
 	fastio;
 
 	string S; cin >> S;
-    int alphabet[26]{};
+	int alphabet[26] = {};
 
 	for (char c : S)
 	{
