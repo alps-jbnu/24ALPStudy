@@ -6,7 +6,7 @@ int main()
 {
     fastio;
 
-    int number[10]{};
+    int number[10] = {};
     int A, B, C; cin >> A >> B >> C;
 
     int n = A * B * C;
