@@ -8,8 +8,8 @@ int main()
 
     int N, K; cin >> N >> K;
     int stud[2][7] = {};
-
     int cnt = 0;
+    
     for (int i = 0; i < N; i++)
     {
         int S, Y; cin >> S >> Y;
