@@ -17,7 +17,7 @@ int main(void){
 	for (int i = 0; i < n; i++) {
     	if(x-a[i] > 0 && occur[x-a[i]]) 
 			ans++;
-		occur[a[i]] = true; // 중복 체크
+		occur[a[i]] = true; // 방문체크 
 	}
 	cout << ans;
 }
