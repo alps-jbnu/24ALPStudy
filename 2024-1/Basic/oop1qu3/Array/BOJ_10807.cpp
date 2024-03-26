@@ -8,11 +8,10 @@ int main()
 
     int N; cin >> N;
     int freq[201] = {};
-
-    int k = 0;
+    
     for (int i = 0; i < N; i++)
     {
-        cin >> k;
+        int k; cin >> k;
         if (k < 0) freq[201 + k]++;
         else freq[k]++;
     }
