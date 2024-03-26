@@ -17,6 +17,7 @@ int main(int argc, char **argv)
 	
 	
 	sort(str.begin(), str.end(), greater<char>());
+	//sort(str.begin(), str.end(), greater<>());
 
 	cout << str;
 
