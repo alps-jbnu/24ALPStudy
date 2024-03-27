@@ -1,7 +1,6 @@
-#include <iostream>
-#include <list>
+#include<iostream>
+#include<list>
 using namespace std;
-
 int main(void)
 {
 	ios_base::sync_with_stdio(false); 
@@ -21,7 +20,7 @@ int main(void)
 		t = l.begin();
 		for (int j = 0; j < L.length();j++)
 		{
-			if (L[j] == '<' && t != l.end()) t--;
+			if (L[j] == '<' && t != l.begin()) t--;
 			else if (L[j] == '>' && t != l.end()) t++;
 			else if (L[j] == '-' && t != l.begin()) t = l.erase(--t);
 			else if (L[j] != '<' && L[j] != '>' && L[j] != '-') l.insert(t, L[j]);
