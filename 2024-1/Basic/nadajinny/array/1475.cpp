@@ -1,13 +1,15 @@
 #include <iostream>
 #define MAX(a,b) a>b?a:b
 
-char N[1000001];
 int main() {
-    int set = 0, num[10] = { 0 };
+    std::string N;
+
+    int set = 0;
+    int num[10] = { 0 };
     std::cin >> N;
     //0~9 각각 개수 count
-    for (int i = 0; i < strlen(N); i++)
-        num[N[i]]++;
+    for (int i = 0; i < N.length(); i++)
+        num[N[i]-'0']++;
 
     //6과 9를 제외한 숫자들 중 가장 높은 빈도수
     for (int i = 0; i < 10; i++)
