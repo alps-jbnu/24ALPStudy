@@ -2,57 +2,51 @@
 #define fastio std::cin.tie(0)->sync_with_stdio(0)
 using namespace std;
 
-// input: 10 3 7 4 12 2
-// output: 3 0 1 0 1 0 = 5
-//
-// process:
-// height [0] [01] [2] [3] [4] [05] [6] [7]
-//         H   10   3   7   4   12   2   H
-//        (H = MAX_HEIGHT + 1)
+// building:   [1] [2] [3] [4] [5] [6] [7] 
+// input:       8   3   7   4   4   9   2   
+// output:      4   0   2   0   0   1   0
+// hint:        5   2   5   4   5   7   7
 // 
-// stk 0 -> 0,1 -> 0,1,2 -> 0,1,3 -> 0,1,3,4 
-// arr 0 -> 0,0 -> 0,0,0 -> 0,1,0 -> 0,1,0,0 
-// 
-// stk -> 0,1,3 / 0,1 / 0 / 0,5 -> 0,5,6 -> 0,5 / 0 / 0,7
-// arr -> 0,1,1 / 0,3 / 4 / 4,0 -> 4,0,0 -> 4,1 / 6 / 6,0
-
+// stk  1 -> 1,2 -> 1,(2),3 -> 1,3,4 -> 1,3,(4),5 -> (1),(3),(5),6 -> 6,7 -> (6),(7)
+// hint 0 -> 0,0 -> 0, 2 ,0 -> 0,0,0 -> 0,0, 4 ,0 ->  5 , 5 , 5 ,0 -> 0,0 ->  7 , 7
 
 const int MAX_HEIGHT = 1e9;
 const int MAX_SIZE = 80000;
 
-stack<int> stk;
-int arr[MAX_SIZE + 1] = {};
-int height[MAX_SIZE + 1] = {};
-
-void pop();
+int height[MAX_SIZE + 2] = {};
 
 int main()
 {
 	fastio;
 
 	int N; cin >> N;
-	height[0] = MAX_HEIGHT + 1;
+
+	height[0] = MAX_HEIGHT + 2;
+	height[N + 1] = MAX_HEIGHT + 1;
+
+	stack<int> stk;
 	stk.push(0);
+
+	long long sum = 0;
 
 	for (int i = 1; i <= N; i++)
 	{
-		int h; cin >> h;
-		height[i] = (h);
+		cin >> height[i];
 
-		while (h > height[stk.top()]) pop();
+		while (height[i] >= height[stk.top()])
+		{
+			sum += (i - 1) - stk.top();
+			stk.pop();
+		}
+
 		stk.push(i);
 	}
 
-	while (MAX_HEIGHT + 1 > height[stk.top()]) pop();
+	while (height[N + 1] >= height[stk.top()])
+	{
+		sum += N - stk.top();
+		stk.pop();
+	}
 
-	int sum = 0;
-	for (int i = 1; i <= N; i++) sum += arr[i];
 	cout << sum;
-}
-
-void pop()
-{
-	int k = arr[stk.top()];
-	stk.pop();
-	arr[stk.top()] += ++k;
 }
