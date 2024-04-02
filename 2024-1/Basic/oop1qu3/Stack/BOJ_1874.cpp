@@ -9,17 +9,21 @@ int* iiter = nullptr;
 char* oiter = nullptr;
 stack<int> stk;
 
-void push()
-{
-	int num = *(iiter++);
-	stk.push(num);
-	*(oiter++) = '+';
-}
+bool makeSequence();
+void push();
+void pop();
 
-void pop()
+int main()
 {
-	stk.pop();
-	*(oiter++) = '-';
+	fastio;
+
+	iiter = input_buffer;
+	oiter = output_buffer;
+	cin >> n;
+
+	if (makeSequence())
+		for (int i = 0; i < 2 * n; i++) cout << output_buffer[i] << '\n';
+	else cout << "NO";
 }
 
 bool makeSequence()
@@ -34,19 +38,19 @@ bool makeSequence()
 		if (stk.top() != k) return false;
 		pop();
 	}
-	
+
 	return true;
 }
 
-int main()
+void push()
 {
-	fastio;
+	int num = *(iiter++);
+	stk.push(num);
+	*(oiter++) = '+';
+}
 
-	iiter = input_buffer;
-	oiter = output_buffer;
-	cin >> n;
-
-	if (makeSequence())
-		for (int i = 0; i < 2 * n; i++) cout << output_buffer[i] << '\n';
-	else cout << "NO";
+void pop()
+{
+	stk.pop();
+	*(oiter++) = '-';
 }
