@@ -1,0 +1,46 @@
+// 요세푸스 문제
+// 스택 사용
+#include <iostream>
+#include <list> // STL
+using namespace std;
+
+int main(void)
+{
+    int n, k;
+    cin >> n >> k;
+
+    list<int> li1; // int list 생성 후 n개의 원소를 0으로 초기화
+    
+    for (int i = 1; i <= n; i++)
+    {
+        li1.push_back(i); // 뒤에서부터 삽입
+    }
+
+    list<int>::iterator cur = li1.begin();
+    
+    // li1.front() = li1.back(); // 첫 번재 요소를 마지막 요소로 설정
+    // li1.push_back(li1.front()); // 마지막 요소를 리스트에 추가
+
+    // for (int i = 0; i < n; i++)
+    // {
+    //     cout << *cur << ' ';
+    //     cur++;
+    // }
+
+    cout << '<';
+    for (int i = 0; i < n - 1; i++)
+    {
+        for (int j = 0; j < k - 1; j++)
+        {
+            if (++cur == li1.end())
+                cur = li1.begin();
+        }
+        cout << *cur << ", ";
+        cur = li1.erase(cur);
+    }
+    cout << *li1.begin() << '>';
+
+    return 0;
+}
+
+// linked list : 연결 리스트

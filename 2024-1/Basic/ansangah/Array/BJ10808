@@ -1,0 +1,23 @@
+// 알파벳 세기
+#include <iostream>
+
+int main(void)
+{
+    std::string voca;
+    std::cin >> voca;
+
+    int count[26] = { 0, };
+
+    for (int i = 0; i < voca.length(); i++)
+    {
+        count[voca[i] - 'a']++;
+        // voca[i]가 a와 얼마나 떨어져 있는지를 계산하여 개수 증가
+    }
+
+    for (int i = 0; i < 26; i++)
+    {
+        std::cout << count[i] << ' ';
+    }
+
+    return 0;
+}
