@@ -9,15 +9,15 @@ int main()
 	int N; cin >> N;
 
 	stack<int> stk;
-	long long sum = 0;
+	long long ans = 0;
 
 	while (N--)
 	{
 		long long h; cin >> h;
 		while (!stk.empty() && h >= stk.top()) stk.pop();
-		sum += stk.size();
+		ans += stk.size();
 		stk.push(h);
 	}
 
-	cout << sum;
+	cout << ans;
 }
