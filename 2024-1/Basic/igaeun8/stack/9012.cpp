@@ -1,36 +1,46 @@
 #include <iostream>
-#include <string>
 #include <stack>
 using namespace std;
 
-int main(void) {
-	int T;
-	cin >> T;
+int main() {	
+	string bracket; 
+	int T;  
+	int bracket_size = 0;  
+	string result;
 	
-	while (T > 0) {
-		T--;
-		string str;
-		cin >> str;
+	cin >> T;
+	for (int i = 0; i < T; i++) {
+		stack<char> s;	
+		result = "YES";	// result 값은 YES로 초기화
 
-		stack<char> s;
-		string answer = "YES";
-		for (int i = 0; i < str.length(); i++) {
-			if (str[i] == '(') {
-				s.push(str[i]);
+		cin >> bracket;	
+		bracket_size = bracket.size();	
+
+		for (int j = 0; j < bracket_size; j++) {
+			if (bracket[j] == '(') {  // 여는 괄호일때
+				s.push('(');
 			}
-			// 짝이 맞는지 확인하고 pop
-			else if (!s.empty() && str[i] == ')' && s.top() == '(') {
-				s.pop();
-			}
-            else{
-				answer = "NO";
-				break;
+
+			else if (bracket[j] == ')') {  // 닫는 괄호일때,
+				if (!s.empty()) {  // 스택이 비어있지 않으면,
+					s.pop();
+				}
+				else {  // 비어있으면
+					result = "NO";
+				}
 			}
 		}
-		//'('와 ')'가 짝이 안 맞는 경우 스택이 비지 않음
-		if (!s.empty()) answer = "NO";
 
-		cout << answer << endl;
+		// 마지막까지 연산완료 후,
+		// 여는 괄호와 닫는 괄호의 짝이 맞지 않는 경우	
+		// 즉, 스택이 비어있지 않은 경우
+		if (!s.empty()) {  
+			result = "NO";
+		}
+
+		cout << result << endl;
+
 	}
+
 	return 0;
 }
