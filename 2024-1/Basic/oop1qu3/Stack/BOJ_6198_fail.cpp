@@ -10,6 +10,7 @@ using namespace std;
 // stk  1 -> 1,2 -> 1,(2),3 -> 1,3,4 -> 1,3,(4),5 -> (1),(3),(5),6 -> 6,7 -> (6),(7)
 // hint 0 -> 0,0 -> 0, 2 ,0 -> 0,0,0 -> 0,0, 4 ,0 ->  5 , 5 , 5 ,0 -> 0,0 ->  7 , 7
 
+
 const int MAX_HEIGHT = 1e9;
 const int MAX_SIZE = 80000;
 
@@ -21,18 +22,17 @@ int main()
 
 	int N; cin >> N;
 
-	height[0] = MAX_HEIGHT + 2;
-	height[N + 1] = MAX_HEIGHT + 1;
-
 	stack<int> stk;
 	stk.push(0);
 
+	height[0] = MAX_HEIGHT + 2;
+	for (int i = 1; i <= N; i++) cin >> height[i];
+	height[N + 1] = MAX_HEIGHT + 1;
+
 	long long sum = 0;
 
-	for (int i = 1; i <= N; i++)
+	for (int i = 1; i <= N + 1; i++)
 	{
-		cin >> height[i];
-
 		while (height[i] >= height[stk.top()])
 		{
 			sum += (i - 1) - stk.top();
@@ -40,12 +40,6 @@ int main()
 		}
 
 		stk.push(i);
-	}
-
-	while (height[N + 1] >= height[stk.top()])
-	{
-		sum += N - stk.top();
-		stk.pop();
 	}
 
 	cout << sum;
