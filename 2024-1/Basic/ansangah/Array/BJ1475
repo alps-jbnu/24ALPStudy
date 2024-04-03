@@ -1,0 +1,37 @@
+// 방 번호
+#include <iostream>
+
+int main(void)
+{
+    int n;
+    std::cin >> n;
+
+    int count[10] = { 0, };
+
+    while(n > 0)
+    {
+        if (n % 10 == 6 || n % 10 == 9)
+        {
+            if (count[6] == count[9])
+                count[6]++;
+            else
+                count[9]++;
+        } // 두 숫자 중 하나를 선택해 횟수를 증가시키는 과정
+        else 
+            count[n % 10]++; // n을 10으로 나눈 나머지
+        
+        n = n / 10; // n을 10으로 나눈 몫 -> 이미 윗 줄에서 카운트 된 숫자는 빼고 다시 계산
+    }
+
+    int max = count[0];
+    for (int i = 0; i < 10; i++)
+    {
+        if (max < count[i])
+            max = count[i];
+    }
+    std::cout << max;
+
+    return 0;
+}
+
+// 9는 6으로 대신 세야함 -> 6이 n개면 n/2개의 세트 필요
