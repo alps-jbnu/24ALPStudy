@@ -2,18 +2,11 @@
 #define fastio std::cin.tie(0)->sync_with_stdio(0)
 using namespace std;
 
-enum Direction
-{
-	FORWARD,
-	BACKWARD
-};
-
 deque<int> deq;
-Direction d;
+bool isReversed;
 
 bool AC();
 void parsing(const string&);
-void reverseArr();
 bool deleteArr();
 void printResult();
 
@@ -43,7 +36,7 @@ bool AC()
 		switch (c)
 		{
 		case 'R':
-			reverseArr();
+			isReversed = 1 - isReversed;
 			break;
 		case 'D':
 			if (!deleteArr()) return false;
@@ -57,7 +50,7 @@ bool AC()
 void parsing(const string& arr)
 {
 	deq.clear();
-	d = FORWARD;
+	isReversed = false;
 	istringstream iss(arr);
 	char c; int x;
 
@@ -69,33 +62,13 @@ void parsing(const string& arr)
 		}
 }
 
-void reverseArr()
-{
-	switch (d)
-	{
-	case FORWARD:
-		d = BACKWARD;
-		break;
-	case BACKWARD:
-		d = FORWARD;
-		break;
-	}
-}
-
 bool deleteArr()
 {
 	if (deq.empty()) return false;
 	else 
 	{
-		switch (d)
-		{
-		case FORWARD:
-			deq.pop_front();
-			break;
-		case BACKWARD:
-			deq.pop_back();
-			break;
-		}
+		if (!isReversed) deq.pop_front();
+		else deq.pop_back();
 	}
 	return true;
 }
@@ -105,17 +78,18 @@ void printResult()
 	cout << '[';
 	while (!deq.empty())
 	{
-		switch (d)
+		if (!isReversed)
 		{
-		case FORWARD:
-			cout << deq.front(); deq.pop_front();
-			break;
-		case BACKWARD:
-			cout << deq.back(); deq.pop_back();
-			break;
+			cout << deq.front();
+			deq.pop_front();
+		}
+		else
+		{
+			cout << deq.back(); 
+			deq.pop_back();
 		}
 
 		if (!deq.empty()) cout << ',';
 	}
-	cout << ']' << '\n';
+	cout << "]\n";
 }
