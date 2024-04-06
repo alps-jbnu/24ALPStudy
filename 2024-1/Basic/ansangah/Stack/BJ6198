@@ -1,0 +1,32 @@
+// 옥상 정원 꾸미기
+#include <bits/stdc++.h>
+using namespace std;
+
+int main(void)
+{
+    int n;
+    cin >> n;
+    long long result = 0; // int형의 범위를 벗어나므로 long long으로 정의
+
+    stack<int> s;
+    for (int i = 0; i < n; i++)
+    {
+        int high;
+        cin >> high;
+        if (s.empty())
+        {
+            s.push(high);
+            continue;
+        }
+        while (!s.empty() && s.top() <= high ) // 현재 건물보다 작은 건물은 다 빼주기
+        {
+            s.pop();
+        }
+        result += s.size(); // 현재 스택에 남아 있는 개수만큼 결과값에 더해줌. (자기 자신 제외)
+        s.push(high); // 스택에 자기 자신 포함
+    }
+    
+    cout << result;
+
+    return 0;
+}

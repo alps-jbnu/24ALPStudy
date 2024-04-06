@@ -1,0 +1,24 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main(void)
+{
+    int n;
+    cin >> n;
+
+    queue<int> q;
+    for (int i = 1; i <= n; i++)
+        q.push(i);
+
+    while (!q.empty()) {
+        if (q.size() == 1)
+            break;
+        q.pop();
+        int f = q.front();
+        q.push(f);
+        q.pop();
+    }
+    cout << q.front() << '\n';
+
+    return 0;
+}
