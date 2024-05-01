@@ -14,7 +14,6 @@ bool check(int i, int j){ // 실제 배열 안에 있는지 확인
   return (i >=0 && i < n && j >=0 && j < m);
 }
 
-
 void initvis(){
   for(int i=0; i<n; i++)
     fill(vis[i], vis[i]+m, 0); // 0으로 초기화
@@ -34,15 +33,15 @@ void melting(){
     }
   }
   
-  for(int i=0; i<n; i++){ // 빙산 얼만큼 녹일까
+  for(int i=0; i<n; i++){ // 빙산을 얼마나 녹일까
     for(int j=0; j<m; j++)
-      area[i][j] = max(0, area[i][j] - zero[i][j]);
+      area[i][j] = max(0, area[i][j] - zero[i][j]); // 빙산 높이가 음수가 되지 않게
   }
 }
 
 // 0 : 빙산 다 녹음, 1 : 빙산 한 덩이, 2 : 빙산 분리됨
 int status(){
-  int x,y;
+  int x, y;
   int cnt1 = 0; // 빙산 개수
 
   for(int i=0; i<n; i++){
@@ -55,19 +54,21 @@ int status(){
     }
   }
   if(cnt1 == 0) return 0; // 빙산이 없음
+  
   int cnt2 = 0; // (x,y)와 붙어있는 빙산의 수
-
   queue<pair<int,int>> q; // <int, int>형식의 데이터를 다룰 큐
-  vis[x][y] = 1; // 현재 위치 방문
+  vis[x][y] = 1; // 현재 위치 방문표시
   q.push({x,y});
 
-  while(!q.empty()){ // bfs 연산
+  while(!q.empty()){ // bfs 연산으로 (x,y)와 붙어있는 빙산 개수 세기
     auto cur = q.front(); q.pop();
     cnt2++;
     for(int i=0; i<4; i++){ // 4방향 체크
       int nx = cur.X + dx[i];
       int ny = cur.Y + dy[i];
-      if(!check(nx,ny) || vis[nx][ny] == 1 || area[nx][ny] <= 0) continue; // 정상 범위, 첫 방문, 이동가능 체크
+      if(!check(nx,ny) || vis[nx][ny] == 1 || area[nx][ny] <= 0) continue;
+      // (정상 범위, 첫 방문, 이동가능) 여부 확인
+      
       vis[nx][ny] = 1; // 방문 표시
       q.push({nx, ny}); // 이동
     }
