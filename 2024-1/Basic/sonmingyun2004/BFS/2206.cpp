@@ -59,18 +59,18 @@ int main()
 
             if(next_point.is_first_map)
             {
-                if(first_floor_map[next_point.x][next_point.y] && first_floor_map[next_point.x][next_point.y] != -1) continue;
+                if(first_floor_map[next_point.x][next_point.y] > 0) continue;
                 first_floor_map[next_point.x][next_point.y] = first_floor_map[current_point.x][current_point.y] + 1;
                 if(!second_floor_map[next_point.x][next_point.y]) second_floor_map[next_point.x][next_point.y] = first_floor_map[current_point.x][current_point.y] + 1;
             }
             else if(current_point.is_first_map)
             {
-                if(second_floor_map[next_point.x][next_point.y] && second_floor_map[next_point.x][next_point.y] != -1) continue;
+                if(second_floor_map[next_point.x][next_point.y] > 0) continue;
                 second_floor_map[next_point.x][next_point.y] = first_floor_map[current_point.x][current_point.y] + 1;
             }
             else
             {
-                if(second_floor_map[next_point.x][next_point.y] && second_floor_map[next_point.x][next_point.y] != -1) continue;
+                if(second_floor_map[next_point.x][next_point.y] > 0) continue;
                 second_floor_map[next_point.x][next_point.y] = second_floor_map[current_point.x][current_point.y] + 1;
             }
 
