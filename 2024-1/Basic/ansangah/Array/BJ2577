@@ -1,0 +1,26 @@
+// 숫자의 개수
+#include <iostream>
+#include <string>
+
+int main(void)
+{
+    int a, b, c;
+    std::cin >> a >> b >> c;
+    int count[10] = { 0, };
+
+    int value = a * b * c;
+
+    std::string strvalue = std::to_string(value);
+    // value를 string으로 변환
+
+    for (int i = 0; i < strvalue.length(); i++)
+    {
+        count[strvalue[i] - '0']++;
+    }
+    for (int i = 0; i < 10; i++)
+    {
+        std::cout << count[i] << "\n";
+    }
+
+    return 0;
+}
