@@ -17,13 +17,16 @@ public:
   BST() : root(nullptr), hSum(1) {}
 
   void insert(Node* v, int data, int height){
+    height+=1;
     if(data < v->data) {
-      if(v->left != nullptr) insert(v->left, data, height+1);
-      else {v->left = new Node(data); height += 1; hSum+=height;}
+      if(v->left == nullptr) {
+        v->left = new Node(data); hSum+=height;}
+      else insert(v->left, data, height);
     }
     else{
-      if(v->right != nullptr) insert(v->right, data, height+1);
-      else {v->right = new Node(data); height += 1; hSum+=height;}
+      if(v->right == nullptr) {
+        v->right = new Node(data); hSum+=height; }
+      else insert(v->right, data, height);
     }
   }
 };
@@ -35,11 +38,13 @@ int main() {
   BST tree;
 
   int n; cin >> n;
+
+  int data; cin >> data;
+  tree.root = new Node(data);
   
-  for(int i=0; i<n; i++){
-    int data; cin >> data;
-    if(!tree.root) tree.root = new Node(data);
-    else tree.insert(tree.root, data, 1);
+  for(int i=1; i<n; i++){
+    cin >> data;
+    tree.insert(tree.root, data, 1);
   }
 
   cout << tree.hSum << '\n';
