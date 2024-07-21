@@ -1,17 +1,15 @@
-// Authored by : BaaaaaaaaaaarkingDog
-// Co-authored by : -
-// http://boj.kr/d7178d89538a42ababf4455443e60fe2
-#include <bits/stdc++.h>
-using namespace std;
+#include<stdio.h>
+#include<string.h>
 
-int freq[26];
-int main(void) {
-  ios::sync_with_stdio(0);
-  cin.tie(0);
-  string s;
-  cin >> s;
-  for(auto c : s)
-    freq[c-'a']++;
-  for(int i = 0; i < 26; i++)
-    cout << freq[i] << ' ';
+int main() {
+	int alphabet[26] = { NULL };
+	char word[101] = { NULL };
+	scanf("%s", &word, 101);
+	for (int i = 0; i < strlen(word); i++) {
+		alphabet[word[i] - 'a']++;
+	}
+	for (int i = 0; i < 26; i++) {
+		printf("%d ", alphabet[i]);
+	}
+	return 0;
 }
